@@ -6,9 +6,8 @@ app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
   var fs = require('fs');
-  var buffer = new Buffer();
-  buffer = fs.readFileSync('/index.html');  
-  var strvar = buf.toString();
+  var buffer = fs.readFileSync('./index.html');
+  var strvar = buffer.toString();
   response.send(strvar);
 })
 
